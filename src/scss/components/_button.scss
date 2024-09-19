@@ -50,6 +50,11 @@
     color: white;
     background-color: $acent-color;
     }
+
+    &.active {
+        background-color: $acent-color;
+        color: white;
+    }
     }
 }
 

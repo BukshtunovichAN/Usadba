@@ -1,13 +1,3 @@
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const menuContainer = document.querySelector("[data-menu]");
   const closeButton = document.querySelector("[data-menu-close]");
@@ -24,22 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
   menuLinks.forEach((link) => {
     link.addEventListener("click", closeMenu);
   });
+
+  // Установите кнопку "Всё меню" как активную по умолчанию
+  filterItems("Всё меню");
+  setActiveButton("Всё меню");
 });
 
-// function filterItems(category) {
-//   const items = document.querySelectorAll(".flex-element");
-
-//   items.forEach((item) => {
-//     const itemCategory = item.querySelector("p").innerText;
-
-//     if (category === "Всё меню" || itemCategory === category) {
-//       item.classList.add("show");
-//     } else {
-//       item.classList.remove("show");
-//     }
-//   });
-// }
-
+// Функция для фильтрации элементов
 window.filterItems = function (category) {
   const items = document.querySelectorAll(".flex-element");
 
@@ -54,12 +35,22 @@ window.filterItems = function (category) {
   });
 };
 
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+// Функция для установки активной кнопки
+function setActiveButton(category) {
+  document.querySelectorAll(".filter .button").forEach((button) => {
+    if (button.innerText.trim() === category) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
+}
 
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
+// Обработчик кликов на кнопки
+document.querySelectorAll(".filter .button").forEach((button) => {
+  button.addEventListener("click", function () {
+    const category = this.innerText.trim();
+    filterItems(category);
+    setActiveButton(category);
   });
 });
