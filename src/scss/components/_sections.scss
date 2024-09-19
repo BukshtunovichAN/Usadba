@@ -1,0 +1,74 @@
+.section-title {
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media screen and (max-width: 1199px) {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.84px;
+    }
+    
+}
+.section {
+    background-color: $white-text-color;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &.no-padding {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    }
+}
+
+.section-team {
+    background-color: $bcg-button-color;
+    font-size: 16px;
+    line-height: 1.19;
+
+    padding-top: 94px;
+    padding-bottom: 94px;
+    
+    @media screen and (max-width:1199px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+    @media screen and (min-width: 1200px){
+    .section-title{       
+        font-size: 36px;
+        line-height:1.166;       
+        margin-bottom: 50px;    
+    }
+}
+
+.section-title{
+    color: $title-text-color;
+
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1.178;
+    text-align: center;
+    
+    margin-bottom: 30px; 
+
+    @media screen and (min-width: 1200px){     
+    font-size: 36px; 
+    }
+}
+
+#gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+}

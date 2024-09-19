@@ -1,0 +1,56 @@
+.services {
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: center;
+        
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            justify-content: center;
+            /* Центрирование контента для одной колонки */
+        }
+
+        
+    }
+
+    &__item {
+        box-sizing: border-box;
+        text-align: left;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        &-title {
+            color: #555;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        &-description {
+            font-size: 1rem;
+            color: #555;
+        }
+    }
+}
