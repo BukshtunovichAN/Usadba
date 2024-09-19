@@ -19,7 +19,7 @@
 
     background-image: 
     linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
-    url(/images/herobg/bg-mobile.jpg);
+    url(/images/gallery/gall23.jpg);
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -27,14 +27,14 @@
   (min-resolution: 2dppx) {
     .backgroundhero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
-    url(/images/herobg/bg-mobile@2x.jpg) ;
+    url(/images/gallery/gall23.jpg) ;
     }
   }
 
 @media screen and (min-width: 768px){
     .backgroundhero{                
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
-    url(/images/herobg//bg-tablet.jpg) ;                              
+    url(/images/gallery/gall23.jpg) ;                              
 }
 
 @media screen and (min-device-pixel-ratio: 2),
@@ -42,7 +42,7 @@
     screen and (min-resolution: 2dppx) {
     .backgroundhero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
-    url(/images/herobg/bg-tablet@2x.jpg) ;
+    url(/images/gallery/gall23.jpg) ;
         }
     }   
 }
@@ -86,7 +86,7 @@
     letter-spacing: 0.50em;
     }
     @media screen and (max-width: 525px) {
-    font-size: 50px;
+    font-size: 45px;
     line-height: 1.615;
     letter-spacing: 0.20em;
 }
